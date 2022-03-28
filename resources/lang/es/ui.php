@@ -11,7 +11,7 @@ return [
 
     'manage_permissions' => 'Gestión de Permisos',
     'create_permission' => 'Crear Permiso',
-    'placeholder_permission' => 'Nombre del nuevo Permiso',
+    'placeholder_permission' => 'Nombre del Permiso',
 
     'manage_roles' => 'Gestión de Roles',
     'edit_permissions' => 'Editar Permisos',

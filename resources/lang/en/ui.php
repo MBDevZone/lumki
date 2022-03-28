@@ -11,7 +11,7 @@ return [
 
     'manage_permissions' => 'Manage Permissions',
     'create_permission' => 'Create Permission',
-    'placeholder_permission' => 'Name of the new Permission',
+    'placeholder_permission' => 'Name of the Permission',
 
     'manage_roles' => 'Manage Roles',
     'edit_permissions' => 'Edit Permissions',
