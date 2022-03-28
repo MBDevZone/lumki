@@ -10,29 +10,33 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="space-y-10">
                     <div class="px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg">
-                        <div class="space-y-6">
-                        @foreach ($users as $user)
-
-                                <div class="flex items-center justify-between">
-                                    <div>
-                                        {{ $user->name }}
-                                    </div>
-                                    <div>
-                                        {{ $user->getRoleNames()->join(", ") }}
-                                    </div>
-                                    <div class="flex items-center">
+                        <table class="table-auto">
+                            <thead>
+                                <tr>
+                                    <th>{{ __('ID') }}</th>
+                                    <th>{{ __('Name') }}</th>
+                                    <th>{{ __('Role') }}</th>
+                                    <th>#</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td>{{ $user->id }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->getRoleNames()->join(", ") }}</td>
+                                    <td>
                                         <button class="cursor-pointer ml-6 text-sm text-blue-500 focus:outline-none">
                                             <a href="{{ route('lumki.users.edit', $user) }}">{{ __('lumki::ui.edit_roles') }}</a>
                                         </button>
                                         <button class="cursor-pointer ml-6 text-sm text-red-500 focus:outline-none">
                                             <a href="{{ route('impersonate', $user->id) }}">{{ __('lumki::ui.impersonate') }}</a>
                                         </button>
-                                    </div>
-                                </div>
-
-                        @endforeach
-                        </div>
-
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="flex items-center justify-end px-4 py-3 bg-gray-50 text-right sm:px-6">
