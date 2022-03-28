@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="space-y-10">
                     <div class="px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg">
-                        <table class="table-auto">
+                        <table class="table-auto table-hl">
                             <thead>
                                 <tr>
                                     <th>{{ __('ID') }}</th>
