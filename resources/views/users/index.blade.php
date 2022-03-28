@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="space-y-10">
                     <div class="px-4 py-5 sm:p-6 bg-white shadow sm:rounded-lg">
-                        <table class="table-auto table-hl">
+                        <table class="table-auto">
                             <thead>
                                 <tr>
                                     <th>{{ __('ID') }}</th>
@@ -26,7 +26,7 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->getRoleNames()->join(", ") }}</td>
                                     <td>
-                                        <button class="cursor-pointer ml-6 text-sm text-blue-500 focus:outline-none">
+                                        <button class="cursor-pointer text-sm text-blue-500 focus:outline-none">
                                             <a href="{{ route('lumki.users.edit', $user) }}">{{ __('lumki::ui.edit_roles') }}</a>
                                         </button>
                                         <button class="cursor-pointer ml-6 text-sm text-red-500 focus:outline-none">
