@@ -1,3 +1,6 @@
+@php
+    $cuser = auth()->user();
+@endphp
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -21,7 +24,7 @@
                             </thead>
                             <tbody>
                             @foreach ($users as $user)
-                                <tr>
+                                <tr class="{{ $cuser->id === $user->id ? 'text-red-700' : '' }}">
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->getRoleNames()->join(", ") }}</td>
