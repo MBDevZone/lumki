@@ -32,9 +32,11 @@
                                         <button class="cursor-pointer text-sm text-blue-500 focus:outline-none">
                                             <a href="{{ route('lumki.users.edit', $user) }}">{{ __('lumki::ui.edit_roles') }}</a>
                                         </button>
+                                        @if ( $cuser->id !== $user->id)
                                         <button class="cursor-pointer ml-6 text-sm text-red-500 focus:outline-none">
                                             <a href="{{ route('impersonate', $user->id) }}">{{ __('lumki::ui.impersonate') }}</a>
                                         </button>
+                                        @endif
                                     </td>
                                 </tr>
                             @endforeach
